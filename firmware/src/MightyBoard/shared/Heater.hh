@@ -25,13 +25,13 @@
 #include "Types.hh"
 #include "Timeout.hh"
 
-//#define MAX_VALID_TEMP 280
-//#define MAX_HBP_TEMP   130
+//#define MAX_VALID_TEMP 350
+//#define MAX_HBP_TEMP   150
 
 #ifdef HEATER_CUSTOM_LIMIT
 const uint16_t Heater_Max_Temp[2] = HEATER_CUSTOM_LIMIT;
 #else
-const uint16_t Heater_Max_Temp[2] = {280,130};
+const uint16_t Heater_Max_Temp[2] = {350,150};
 #endif
 
 #  define MAX_VALID_TEMP Heater_Max_Temp[0]

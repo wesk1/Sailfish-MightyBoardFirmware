@@ -193,7 +193,7 @@ for s in features.get('squeeze', []):
     if s[0] != '[':
        squeeze_srcs.append(s)
     else:
-	squeeze_srcs += eval(s)
+       squeeze_srcs += eval(s.replace('\t', '    '))
 
 # Must not have SoftI2cManager.cc
 softi2c = [item for item in squeeze_srcs if item.endswith('SoftI2cManager.cc')]

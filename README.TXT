@@ -1,5 +1,23 @@
 This is the firmware source for Makerbot MightyBoard
 
+Replicator 2 custom fork
+------------------------
+
+This fork preserves a hardware-tested Replicator 2 configuration based on
+upstream master commit 4d8456e5 (Sailfish 7.8 development source).  The
+Replicator 2-specific changes are:
+
+* Move X and Y to their stored home positions when clearing the platform.
+* Move Z 90 mm farther from the nozzle, capped at the configured Z travel.
+* Enable heated-build-platform support and the RGB LED menu.
+* Configure axis travel as 280 x 150 x 150 mm.
+* Set firmware temperature limits to 350 C for the extruder and 150 C for
+  the heated build platform.
+
+The temperature limits are safety cutoffs, not recommended operating
+temperatures.  Confirm that the installed hardware, thermistors, wiring, and
+power system are rated for any temperature used.
+
 If you're getting started, please begin by reading the documentation for
 the firmware:
 http://wiki.makerbot.com/v2-firmware
